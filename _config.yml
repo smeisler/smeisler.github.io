@@ -85,12 +85,12 @@ analytics:
 author:
   name             : "Steven L. Meisler"
   avatar           : "https://gravatar.com/avatar/a23f77747ba192086c176e8b97f64a49?s=400&d=robohash&r=x"
-  bio              : "Cognitive neuroscientist interested in the relationships between brain structure, function, and behavior. Also interested in the neural correlates of reading abiility, disability, and intervention."
-  location         : "Cambridge, MA"
-  employer         : "Harvard Medical School / MIT"
+  bio              : "Neuroinformaticist interested in predicting psychosis and schizophrenia. Previously worked on neuro-structural correlates of reading abilities."
+  location         : "Philadelphia, PA"
+  employer         : "University of Pennsylvania"
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=steven+meisler"
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=0lB9-GcAAAAJ&view_op=list_works&authuser=1&sortby=pubdate"
-  email            : "smeisler@g.harvard.edu"
+  email            : "Steven.Meisler@pennmedicine.upenn.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/Steven-Meisler"
   uri              :
   bitbucket        :
