@@ -28,6 +28,18 @@ I am primarily a jazz vibraphonist (but also play some piano and drums, as well 
 ## Little B's Poem (Bobby Hutcherson)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6bkZ79XKfuo?start=6958&amp;end=7575" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## The Windup (Keith Jarrett)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BWhPcL7XwA8?start=7075&amp;end=7718" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Tell me a Bedtime Story (Herbie Hancock)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BWhPcL7XwA8?start=8244&amp;end=8627" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Donna Lee (Charlie Parker)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BWhPcL7XwA8?start=8657&amp;end=9013" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Ring of Saturn (Dirty Loops + Cory Wong, arr. Steven Meisler)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BWhPcL7XwA8?start=9093&amp;end=9572" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## MIT Staff Party (various songs)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/czZjgHPXNgQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
