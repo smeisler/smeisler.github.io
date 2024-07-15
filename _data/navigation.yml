@@ -13,13 +13,12 @@ main:
     url: /cv/
     
   - title: "Teaching"
-    url: /teaching/  
-    
-  - title: "Talks"
-    url: /talks/    
+    url: /teaching/    
+
+  - title: "Music"
+    url: /music/
 
   - title: "Software"
     url: /software/
 
-  - title: "Music"
-    url: /music/
+
