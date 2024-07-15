@@ -7,8 +7,9 @@ author_profile: true
 
 I am primarily a jazz vibraphonist (but also play some piano and drums, as well as venture out to other genres). Below are some selected recordings, I hope you enjoy!
 
-(Youtube embeddings are coded to start at the beginning the listed song)
 
+# Videos
+(Youtube embeddings are coded to start at the beginning the listed song)
 ## Madiba (Shaun Martin)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/C_oE_s0Op78?start=4803&amp;end=5249" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
