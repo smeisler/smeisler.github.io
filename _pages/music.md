@@ -1,16 +1,11 @@
 ---
-layout: archive
+layout: single
 title: "Music"
 permalink: /music/
 author_profile: true
 ---
 
-Nothing here yet.
+I am primarily a jazz vibraphonist (but also play some piano and drums, as well as venture out to other genres). Below are some selected recordings, I hope you enjoy!
 
-{% include base_path %}
-
-
-{% for post in site.music %}
-  {% include archive-single.html %}
-{% endfor %}
-
+## Madiba (Shaun Martin)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C_oE_s0Op78?start=4803&amp;end=5249" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
