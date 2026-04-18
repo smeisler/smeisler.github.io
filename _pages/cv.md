@@ -7,7 +7,7 @@ redirect_from:
   - /resume
 ---
 
-Last updated: September 15th, 2025
+Last updated: April 18th, 2026
 
 [To download or view on a mobile device, press this link](https://smeisler.github.io/files/StevenMeisler_CV.pdf)
 
