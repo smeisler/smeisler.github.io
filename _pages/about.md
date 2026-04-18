@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a postdoctoral fellow at the [Penn Lifespan Informatics and Neuroimaging Center](https://www.pennlinc.io/), working with Dr. Ted Satterthwaite. I received my PhD from the Harvard/MIT Program in Speech and Hearing Bioscience and Technology (SHBT), where I trained in multimodal neuroimaging and cognitive neuroscience.
+I am a postdoctoral fellow at the [Penn Lifespan Informatics and Neuroimaging Center](https://www.pennlinc.io/), working with Dr. Theodore Satterthwaite. I received my PhD from the Harvard/MIT Program in Speech and Hearing Bioscience and Technology (SHBT), where I trained in multimodal neuroimaging and cognitive neuroscience.
 
 My research focuses on understanding how white matter development supports cognition and contributes to risk for emerging psychopathology. I leverage large-scale, multimodal neuroimaging datasets and advanced computational methods to characterize developmental trajectories across infancy through adolescence, with a particular interest in how these patterns generalize to clinically acquired data. Looking ahead, I aim to build a research program that integrates population-scale neuroscience with clinically actionable biomarkers of neurodevelopmental and psychiatric disorders.
 
