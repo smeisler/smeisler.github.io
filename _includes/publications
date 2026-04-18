@@ -22,12 +22,20 @@
   {% assign venue_searchterms = include.venue_search | downcase | split: ";" %}
 {% endif %}
 
-{% if include.venue_seach_exclude %}
+{% if include.venue_search_exclude %}
   {% assign venue_searchterms_exclude = include.venue_search_exclude | downcase | split: ";" %}
 {% endif %}
 
 {% if include.author %}
   {% assign authors = include.author | downcase | split: ";" %}
+{% endif %}
+
+{% if include.first_author %}
+  {% assign first_authors = include.first_author | downcase | split: ";" %}
+{% endif %}
+
+{% if include.first_author_exclude %}
+  {% assign first_authors_exclude = include.first_author_exclude | downcase | split: ";" %}
 {% endif %}
 
 {% assign counter = 0 %}
@@ -91,12 +99,12 @@
     {% assign is_venue_search = true %}
   {% endif %}
   
-  {% if include.venue_search_exclue %}
+  {% if include.venue_search_exclude %}
     {% assign venue = citation.Publication | downcase %}
     {% assign is_venue_search_exclude = true %}
     {% for term in venue_searchterms_exclude %}
       {% if venue contains term %}
-        {% assign is_venue_search_exlude = false %}
+        {% assign is_venue_search_exclude = false %}
       {% endif %}
     {% endfor %}
   {% else %}
@@ -122,7 +130,45 @@
     {% assign is_author = true %}
   {% endif %}
 
-  {% if is_venue and is_year and is_search and is_author and is_venue_search and is_venue_search_exclude %}
+  {% if include.first_author %}
+    {% capture first_author_raw %}
+      {% for element in citation %}
+        {% if forloop.first %}
+          {{ element[1] }}
+        {% endif %}
+      {% endfor %}
+    {% endcapture %}
+    {% assign first_author_entry = first_author_raw | split: ";" | first | split: "," | first | strip | downcase %}
+    {% assign is_first_author = false %}
+    {% for author in first_authors %}
+      {% if first_author_entry contains author %}
+        {% assign is_first_author = true %}
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    {% assign is_first_author = true %}
+  {% endif %}
+
+  {% if include.first_author_exclude %}
+    {% capture first_author_raw_exclude %}
+      {% for element in citation %}
+        {% if forloop.first %}
+          {{ element[1] }}
+        {% endif %}
+      {% endfor %}
+    {% endcapture %}
+    {% assign first_author_entry_exclude = first_author_raw_exclude | split: ";" | first | split: "," | first | strip | downcase %}
+    {% assign is_first_author_exclude = true %}
+    {% for author in first_authors_exclude %}
+      {% if first_author_entry_exclude contains author %}
+        {% assign is_first_author_exclude = false %}
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    {% assign is_first_author_exclude = true %}
+  {% endif %}
+
+  {% if is_venue and is_year and is_search and is_author and is_first_author and is_first_author_exclude and is_venue_search and is_venue_search_exclude %}
     {% capture citation_Authors %}
       {% for element in citation %}
         {% if forloop.first %}
