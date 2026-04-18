@@ -59,9 +59,7 @@ yandex_site_verification :
 # Social Sharing
 twitter:
   username               : StevenMeisler
-mastodon:
-- username: smeisler
-  instance: mastodon.online
+bluesky                  : "stevenmeisler.com" # Replace this with you Bluesky username
 facebook:
   username               :
   app_id                 :
