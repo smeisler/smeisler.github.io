@@ -2,9 +2,6 @@
 main:
   - title: "Home"
     url: /about/
-         
-  - title: "News and Updates"
-    url: /news-updates/
 
   - title: "Publications"
     url: /publications/
@@ -17,8 +14,3 @@ main:
 
   - title: "Music"
     url: /music/
-
-  - title: "Software"
-    url: /software/
-
-
