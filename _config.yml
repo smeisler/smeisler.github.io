@@ -92,6 +92,7 @@ author:
   email            : "Steven.Meisler@pennmedicine.upenn.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/Steven-Meisler"
   uri              :
+  bluesky          : "@stevenmeisler.com"
   bitbucket        :
   codepen          :
   dribbble         :
@@ -105,7 +106,7 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         :
-  mastodon         : "mastodon.online/@smeisler"
+  mastodon         : 
   orcid            : "0000-0002-8888-1572"
   osf              : "tw8pn"
   pinterest        :
