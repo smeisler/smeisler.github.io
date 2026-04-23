@@ -38,6 +38,10 @@
   {% assign first_authors_exclude = include.first_author_exclude | downcase | split: ";" %}
 {% endif %}
 
+{% if include.bold_author %}
+  {% assign bold_authors = include.bold_author | downcase | split: ";" %}
+{% endif %}
+
 {% assign counter = 0 %}
 
 
@@ -199,24 +203,58 @@
 
     {% if style == "mla" or style == "chicago" %}
       {% for first_name in first_names %}
+        {% assign author_text = "" %}
         {% if forloop.first == true %} 
-          {% assign formatted_author_list = formatted_author_list | append: last_names[forloop.index0] | append: ", " | append: first_name | append: ";" %}
+          {% assign author_text = last_names[forloop.index0] | append: ", " | append: first_name %}
         {% elsif forloop.first == true and forloop.last == true %}
-          {% assign formatted_author_list = formatted_author_list | append: last_names[forloop.index0] | append: ", " | append: first_name %}
+          {% assign author_text = last_names[forloop.index0] | append: ", " | append: first_name %}
         {% elsif forloop.last == true %}
-          {% assign formatted_author_list = formatted_author_list | append: first_name | append: " " | append: last_names[forloop.index0] %}
+          {% assign author_text = first_name | append: " " | append: last_names[forloop.index0] %}
         {% else %}
-          {% assign formatted_author_list = formatted_author_list | append: first_name | append: " " | append: last_names[forloop.index0] | append: ";" %}
+          {% assign author_text = first_name | append: " " | append: last_names[forloop.index0] %}
+        {% endif %}
+
+        {% assign should_bold = false %}
+        {% if include.bold_author %}
+          {% assign candidate_last_name = last_names[forloop.index0] | downcase %}
+          {% for author in bold_authors %}
+            {% if candidate_last_name contains author %}
+              {% assign should_bold = true %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        {% if should_bold %}
+          {% assign author_text = "<strong>" | append: author_text | append: "</strong>" %}
+        {% endif %}
+
+        {% assign formatted_author_list = formatted_author_list | append: author_text %}
+        {% unless forloop.last %}
+          {% assign formatted_author_list = formatted_author_list | append: ";" %}
         {% endif %}
       {% endfor %}
     {% elsif style == "apa" or style == "harvard" or style == "vancouver"%}
       {% for first_name in first_names %}
         {% assign first_initial = first_name | slice: 1 %}
-        {% assign formatted_author_list = formatted_author_list | append: last_names[forloop.index0] | append: ", " | append: first_initial %}
+        {% assign author_text = last_names[forloop.index0] | append: ", " | append: first_initial %}
         {% if style == "apa" or style == "harvard" %}
-          {% assign formatted_author_list = formatted_author_list | append: "." %}
+          {% assign author_text = author_text | append: "." %}
         {% endif %}
-        {% if forloop.last == false %}
+
+        {% assign should_bold = false %}
+        {% if include.bold_author %}
+          {% assign candidate_last_name = last_names[forloop.index0] | downcase %}
+          {% for author in bold_authors %}
+            {% if candidate_last_name contains author %}
+              {% assign should_bold = true %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        {% if should_bold %}
+          {% assign author_text = "<strong>" | append: author_text | append: "</strong>" %}
+        {% endif %}
+
+        {% assign formatted_author_list = formatted_author_list | append: author_text %}
+        {% unless forloop.last %}
           {% assign formatted_author_list = formatted_author_list | append: ";" %}
         {% endif %}
       {% endfor %}
