@@ -7,7 +7,7 @@ redirect_from:
   - /resume
 ---
 
-Last updated: April 18th, 2026
+Last updated: April 23rd, 2026
 
 <p>
   <a href="https://smeisler.github.io/files/StevenMeisler_CV.pdf" class="btn btn--primary">
