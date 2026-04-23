@@ -39,7 +39,7 @@
 {% endif %}
 
 {% if include.bold_author %}
-  {% assign bold_authors = include.bold_author | downcase | split: ";" %}
+  {% assign bold_authors = include.bold_author | split: ";" %}
 {% endif %}
 
 {% assign counter = 0 %}
@@ -203,60 +203,41 @@
 
     {% if style == "mla" or style == "chicago" %}
       {% for first_name in first_names %}
-        {% assign author_text = "" %}
         {% if forloop.first == true %} 
-          {% assign author_text = last_names[forloop.index0] | append: ", " | append: first_name %}
+          {% assign formatted_author_list = formatted_author_list | append: last_names[forloop.index0] | append: ", " | append: first_name | append: ";" %}
         {% elsif forloop.first == true and forloop.last == true %}
-          {% assign author_text = last_names[forloop.index0] | append: ", " | append: first_name %}
+          {% assign formatted_author_list = formatted_author_list | append: last_names[forloop.index0] | append: ", " | append: first_name %}
         {% elsif forloop.last == true %}
-          {% assign author_text = first_name | append: " " | append: last_names[forloop.index0] %}
+          {% assign formatted_author_list = formatted_author_list | append: first_name | append: " " | append: last_names[forloop.index0] %}
         {% else %}
-          {% assign author_text = first_name | append: " " | append: last_names[forloop.index0] %}
-        {% endif %}
-
-        {% assign should_bold = false %}
-        {% if include.bold_author %}
-          {% assign candidate_last_name = last_names[forloop.index0] | downcase %}
-          {% for author in bold_authors %}
-            {% if candidate_last_name contains author %}
-              {% assign should_bold = true %}
-            {% endif %}
-          {% endfor %}
-        {% endif %}
-        {% if should_bold %}
-          {% assign author_text = "<strong>" | append: author_text | append: "</strong>" %}
-        {% endif %}
-
-        {% assign formatted_author_list = formatted_author_list | append: author_text %}
-        {% unless forloop.last %}
-          {% assign formatted_author_list = formatted_author_list | append: ";" %}
+          {% assign formatted_author_list = formatted_author_list | append: first_name | append: " " | append: last_names[forloop.index0] | append: ";" %}
         {% endif %}
       {% endfor %}
     {% elsif style == "apa" or style == "harvard" or style == "vancouver"%}
       {% for first_name in first_names %}
         {% assign first_initial = first_name | slice: 1 %}
-        {% assign author_text = last_names[forloop.index0] | append: ", " | append: first_initial %}
+        {% assign formatted_author_list = formatted_author_list | append: last_names[forloop.index0] | append: ", " | append: first_initial %}
         {% if style == "apa" or style == "harvard" %}
-          {% assign author_text = author_text | append: "." %}
+          {% assign formatted_author_list = formatted_author_list | append: "." %}
         {% endif %}
-
-        {% assign should_bold = false %}
-        {% if include.bold_author %}
-          {% assign candidate_last_name = last_names[forloop.index0] | downcase %}
-          {% for author in bold_authors %}
-            {% if candidate_last_name contains author %}
-              {% assign should_bold = true %}
-            {% endif %}
-          {% endfor %}
-        {% endif %}
-        {% if should_bold %}
-          {% assign author_text = "<strong>" | append: author_text | append: "</strong>" %}
-        {% endif %}
-
-        {% assign formatted_author_list = formatted_author_list | append: author_text %}
-        {% unless forloop.last %}
+        {% if forloop.last == false %}
           {% assign formatted_author_list = formatted_author_list | append: ";" %}
         {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% assign author_sentence = formatted_author_list | split: ";" | array_to_sentence_string: "&" %}
+    {% if include.bold_author %}
+      {% for author in bold_authors %}
+        {% capture bolded_author %}<strong>{{ author }}</strong>{% endcapture %}
+        {% assign author_sentence = author_sentence | replace: author, bolded_author %}
+      {% endfor %}
+    {% endif %}
+    {% assign author_vancouver = formatted_author_list | split: ";" | join: ", " %}
+    {% if include.bold_author %}
+      {% for author in bold_authors %}
+        {% capture bolded_author %}<strong>{{ author }}</strong>{% endcapture %}
+        {% assign author_vancouver = author_vancouver | replace: author, bolded_author %}
       {% endfor %}
     {% endif %}
     
@@ -269,23 +250,23 @@
     
     {% if style == "mla" %}
       <li>
-        {{ formatted_author_list | split: ";" | array_to_sentence_string }}. "{{ title_link }}." <em>{{citation.Publication}}</em> ({{citation.Year}}).
+        {{ author_sentence }}. "{{ title_link }}." <em>{{citation.Publication}}</em> ({{citation.Year}}).
       </li>
     {% elsif style == "apa" %}  
       <li>
-        {{ formatted_author_list | split: ";" | array_to_sentence_string: "&"}} ({{citation.Year}}). {{ title_link }}. <em>{{citation.Publication}}</em>.
+        {{ author_sentence }} ({{citation.Year}}). {{ title_link }}. <em>{{citation.Publication}}</em>.
       </li>
     {% elsif style == "chicago" %}
       <li>
-        {{ formatted_author_list | split: ";" | array_to_sentence_string }}. "{{ title_link }}." <em>{{citation.Publication}}</em> ({{citation.Year}}).
+        {{ author_sentence }}. "{{ title_link }}." <em>{{citation.Publication}}</em> ({{citation.Year}}).
       </li>
     {% elsif style == "harvard" %}
       <li>
-        {{ formatted_author_list | split: ";" | array_to_sentence_string }}, {{citation.Year}}. {{ title_link }}. <em>{{citation.Publication}}</em>.
+        {{ author_sentence }}, {{citation.Year}}. {{ title_link }}. <em>{{citation.Publication}}</em>.
       </li>
     {% elsif style == "vancouver" %}
       <li>
-        {{ formatted_author_list | split: ";" | join: ", " }}. {{ title_link }}. {{citation.Publication}}. {{citation.Year}}.
+        {{ author_vancouver }}. {{ title_link }}. {{citation.Publication}}. {{citation.Year}}.
       </li>
     {% endif %}
     
