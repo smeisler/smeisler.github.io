@@ -10,7 +10,7 @@ redirect_from:
 
 I am a postdoctoral fellow at the [Penn Lifespan Informatics and Neuroimaging Center](https://www.pennlinc.io/), working with Dr. Theodore Satterthwaite. I received my PhD from the Harvard/MIT Program in Speech and Hearing Bioscience and Technology (SHBT), where I trained in multimodal neuroimaging and cognitive neuroscience under Dr. John Gabrieli.
 
-**I plan to enter the tenure-track academic job market in 2027.**
+**I am currently on the academic job market for tenure-track positions beginning in fall 2027.**
 
 My research aim is to understand how white matter development supports cognition and contributes to risk for emerging psychopathology. I leverage large-scale, multimodal neuroimaging datasets and advanced computational methods to characterize developmental trajectories across infancy through adolescence, with a particular interest in how these patterns generalize to clinically acquired data. Looking ahead, I aim to build a research program that integrates population-scale neuroscience with clinically actionable biomarkers of neurodevelopmental and psychiatric disorders.
 
@@ -18,4 +18,4 @@ I am also deeply committed to open and reproducible science. I contribute to and
 
 Previously, during my doctoral work, I studied the neural systems supporting language and reading, combining fMRI, diffusion imaging, and behavioral assessments. Prior to my PhD, I earned my BSE and MSE in Bioengineering from the University of Pennsylvania (2017, 2018), where I worked with Dr. Michael Kahana on intracranial EEG methods for neural data classification. I also worked as a research coordinator in the Laboratory for NeuroImaging of Coma and Consciousness (Dr. Brian Edlow), studying ICU-based neural biomarkers of recovery following traumatic brain injury.
 
-Outside of research, I enjoy running, cooking, and performing music as a jazz percussionist (primarily vibraphone) and pianist.
+Outside of research, I enjoy running, cooking (primarily smoking meat), and performing music as a jazz percussionist (primarily vibraphone) and pianist.
