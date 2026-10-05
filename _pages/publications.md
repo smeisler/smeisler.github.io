@@ -13,11 +13,11 @@ author_profile: true
 ### First-Authored Published
 {% include publications link=true bold_author="Meisler" first_author="Meisler" venue_exclude="bioRxiv;PsyArXiv;arXiv;medRxiv" venue_search_exclude="rxiv;Rxiv;arXiv;medRxiv" %}
 
-### First-Author In Review (Preprints)
+### First-Authored In Review (Preprints)
 {% include publications link=true bold_author="Meisler" first_author="Meisler" venue_search="rxiv;Rxiv;arXiv;medRxiv" %}
 
 ### Co-Authored Published
 {% include publications link=true bold_author="Meisler" first_author_exclude="Meisler" venue_exclude="bioRxiv;PsyArXiv;arXiv;medRxiv" venue_search_exclude="rxiv;Rxiv;arXiv;medRxiv" %}
 
-### Co-Author In Review (Preprints)
+### Co-Authored In Review (Preprints)
 {% include publications link=true bold_author="Meisler" first_author_exclude="Meisler" venue_search="rxiv;Rxiv;arXiv;medRxiv" %}
